@@ -1,0 +1,1 @@
+export const WHATSAPP_NUMBER = "917081196735"; // your number, digits only, country code, no "+"
