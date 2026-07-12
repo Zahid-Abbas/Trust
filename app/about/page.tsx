@@ -6,6 +6,7 @@ import Reveal from "@/components/Reveal";
 import { useApp } from "@/lib/app-context";
 import { fontFor } from "@/lib/palette";
 import { CONTENT } from "@/lib/content";
+import { MAP_EMBED_SRC } from "@/lib/contact-config";
 
 export default function AboutPage() {
   const { colors: c, lang, t } = useApp();
@@ -59,11 +60,14 @@ export default function AboutPage() {
           <h2 className="text-xl sm:text-2xl font-semibold mb-5 sm:mb-6 text-center" style={{ color: c.text, fontFamily: fontFor(lang) }}>
             {t("about.findUs")}
           </h2>
-          <div
-            className="rounded-2xl overflow-hidden h-56 sm:h-64 flex items-center justify-center gap-2 text-center px-4"
-            style={{ background: c.cardAlt, border: `1px solid ${c.border}`, color: c.muted }}
-          >
-            <MapPin size={18} /> <span className="text-sm">{t("about.mapPlaceholder")}</span>
+          <div className="rounded-2xl overflow-hidden h-64 sm:h-80" style={{ border: `1px solid ${c.border}` }}>
+            <iframe
+              src={MAP_EMBED_SRC}
+              className="w-full h-full border-0"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Imamia Masjid, Karimnagar location"
+            />
           </div>
         </Reveal>
       </section>

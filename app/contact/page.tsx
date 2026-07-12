@@ -2,21 +2,24 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MapPin, Phone, Mail, Facebook, Instagram, Youtube, MessageCircle, CheckCircle2 } from "lucide-react";
+import { MapPin, Phone, Mail, Facebook, Instagram, Youtube, MessageCircle, CheckCircle2, AlertCircle } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import { useApp } from "@/lib/app-context";
 import { fontFor } from "@/lib/palette";
-import { WHATSAPP_NUMBER } from "@/lib/contact-config";
+import { WHATSAPP_NUMBER, MAP_EMBED_SRC } from "@/lib/contact-config";
 
-const MAP_EMBED_SRC =
-  "https://www.google.com/maps?q=Imamia+Masjid+Korjha+Ambedkar+Nagar+Uttar+Pradesh&output=embed";
 
 export default function ContactPage() {
   const { colors: c, lang, t } = useApp();
   const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [touched, setTouched] = useState({ name: false, message: false });
   const [sent, setSent] = useState(false);
 
+  const nameError = touched.name && !form.name.trim();
+  const messageError = touched.message && !form.message.trim();
+
   const sendViaWhatsApp = () => {
+    setTouched({ name: true, message: true });
     if (!form.name.trim() || !form.message.trim()) return;
 
     const text = `New message from ${form.name}${form.email ? " (" + form.email + ")" : ""}:\n\n${form.message}`;
@@ -25,6 +28,7 @@ export default function ContactPage() {
 
     setSent(true);
     setForm({ name: "", email: "", message: "" });
+    setTouched({ name: false, message: false });
     setTimeout(() => setSent(false), 3500);
   };
 
@@ -64,14 +68,13 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Real embedded Google Map — no API key needed */}
             <div className="rounded-2xl overflow-hidden h-48 sm:h-56" style={{ border: `1px solid ${c.border}` }}>
               <iframe
                 src={MAP_EMBED_SRC}
                 className="w-full h-full border-0"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Imamiya Masjid Korjha, Ambedkar Nagar location"
+                title="Imamia Masjid Korjha, Ambedkar Nagar location"
               />
             </div>
 
@@ -94,10 +97,30 @@ export default function ContactPage() {
               <input
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
+                onBlur={() => setTouched((t) => ({ ...t, name: true }))}
                 className="w-full rounded-xl px-4 py-2.5 text-sm outline-none transition-shadow focus:ring-2"
-                style={{ background: c.cardAlt, border: `1px solid ${c.border}`, color: c.text, ["--tw-ring-color" as any]: c.primary }}
+                style={{
+                  background: c.cardAlt,
+                  border: `1px solid ${nameError ? "#DC2626" : c.border}`,
+                  color: c.text,
+                  ["--tw-ring-color" as any]: nameError ? "#DC2626" : c.primary,
+                }}
               />
+              <AnimatePresence>
+                {nameError && (
+                  <motion.p
+                    initial={{ opacity: 0, y: -4, height: 0 }}
+                    animate={{ opacity: 1, y: 0, height: "auto" }}
+                    exit={{ opacity: 0, y: -4, height: 0 }}
+                    className="text-xs mt-1 flex items-center gap-1"
+                    style={{ color: "#DC2626" }}
+                  >
+                    <AlertCircle size={12} /> Please enter your name.
+                  </motion.p>
+                )}
+              </AnimatePresence>
             </div>
+
             <div>
               <label className="text-xs font-medium mb-1 block" style={{ color: c.muted }}>
                 {t("contact.formEmail")} <span style={{ opacity: 0.6 }}>(optional)</span>
@@ -110,6 +133,7 @@ export default function ContactPage() {
                 style={{ background: c.cardAlt, border: `1px solid ${c.border}`, color: c.text, ["--tw-ring-color" as any]: c.primary }}
               />
             </div>
+
             <div>
               <label className="text-xs font-medium mb-1 block" style={{ color: c.muted }}>
                 {t("contact.formMessage")}
@@ -118,9 +142,28 @@ export default function ContactPage() {
                 rows={4}
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
+                onBlur={() => setTouched((t) => ({ ...t, message: true }))}
                 className="w-full rounded-xl px-4 py-2.5 text-sm outline-none resize-none transition-shadow focus:ring-2"
-                style={{ background: c.cardAlt, border: `1px solid ${c.border}`, color: c.text, ["--tw-ring-color" as any]: c.primary }}
+                style={{
+                  background: c.cardAlt,
+                  border: `1px solid ${messageError ? "#DC2626" : c.border}`,
+                  color: c.text,
+                  ["--tw-ring-color" as any]: messageError ? "#DC2626" : c.primary,
+                }}
               />
+              <AnimatePresence>
+                {messageError && (
+                  <motion.p
+                    initial={{ opacity: 0, y: -4, height: 0 }}
+                    animate={{ opacity: 1, y: 0, height: "auto" }}
+                    exit={{ opacity: 0, y: -4, height: 0 }}
+                    className="text-xs mt-1 flex items-center gap-1"
+                    style={{ color: "#DC2626" }}
+                  >
+                    <AlertCircle size={12} /> Please enter a message.
+                  </motion.p>
+                )}
+              </AnimatePresence>
             </div>
 
             <motion.button
@@ -131,7 +174,7 @@ export default function ContactPage() {
               className="rounded-full px-6 py-3 text-sm font-semibold text-white flex items-center justify-center gap-2"
               style={{ background: "#25D366" }}
             >
-              <MessageCircle size={14} /> {t("Send")}
+              <MessageCircle size={14} /> {t("contact.sendWhatsapp")}
             </motion.button>
 
             <AnimatePresence>

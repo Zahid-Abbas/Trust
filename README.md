@@ -1,4 +1,4 @@
-# Noor-e-Karbala Trust — Donation Website
+# Haidariya Foundation — Donation Website
 
 A Next.js (App Router) + TypeScript + Tailwind CSS donation website for a Masjid, Imambargah, and Karbala,
 with English / Hindi / Urdu language support, dark/light mode, and live Shia (Jafari) prayer timings.

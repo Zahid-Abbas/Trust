@@ -10,10 +10,10 @@ export const STRINGS = {
   en: {
     "nav.home": "Home", "nav.about": "About Us", "nav.donate": "Donate",
     "nav.transparency": "Transparency", "nav.contact": "Contact", "nav.donateNow": "Donate Now",
-    "brand": "Noor-e-Karbala",
+    "brand": "Haidariya Foundation",
 
     "hero.tag": "Masjid • Imambargah • Karbala",
-    "hero.title": "Noor-e-Karbala Trust",
+    "hero.title": "Haidariya Foundation",
     "hero.subtitle": "A peaceful space for prayer, remembrance, and community — sustained entirely by the generosity of people like you.",
     "hero.donate": "Donate Now", "hero.learnMore": "Learn More",
 
@@ -63,7 +63,7 @@ export const STRINGS = {
     "contact.tag": "Contact", "contact.title": "We'd Love to Hear From You",
     "contact.address": "Address", "contact.addressValue": "Imamiya Masjid, Korjha, Ambedkar Nagar, UP 224139",
     "contact.phone": "Phone", "contact.phoneValue": "+91 70811 96735",
-    "contact.email": "Email", "contact.emailValue": "contact@noorekarbala.org",
+    "contact.email": "Email", "contact.emailValue": "contact@haidariyafoundation.org",
     "contact.mapPlaceholder": "Map placeholder",
     "contact.formName": "Name", "contact.formEmail": "Email", "contact.formMessage": "Message",
     "contact.send": "Send Message", "contact.sent": "Message Sent",
@@ -71,17 +71,17 @@ export const STRINGS = {
 
     "footer.tagline": "A peaceful space for prayer, remembrance, and community service.",
     "footer.quickLinks": "Quick Links", "footer.contact": "Contact", "footer.prayer": "Prayer",
-    "footer.copyright": "© 2026 Noor-e-Karbala Trust. All rights reserved.",
+    "footer.copyright": "© 2026 Haidariya Foundation. All rights reserved.",
     "footer.blessing": "May Allah accept every sincere contribution.",
   },
 
   hi: {
     "nav.home": "होम", "nav.about": "हमारे बारे में", "nav.donate": "दान करें",
     "nav.transparency": "पारदर्शिता", "nav.contact": "संपर्क करें", "nav.donateNow": "अभी दान करें",
-    "brand": "नूर-ए-कर्बला",
+    "brand": "हैदरिया फ़ाउंडेशन",
 
     "hero.tag": "मस्जिद • इमामबाड़ा • कर्बला",
-    "hero.title": "नूर-ए-कर्बला ट्रस्ट",
+    "hero.title": "हैदरिया फ़ाउंडेशन",
     "hero.subtitle": "नमाज़, याद और समुदाय के लिए एक शांत स्थान — जो पूरी तरह आप जैसे उदार लोगों की मदद से चलता है।",
     "hero.donate": "अभी दान करें", "hero.learnMore": "और जानें",
 
@@ -130,8 +130,8 @@ export const STRINGS = {
 
     "contact.tag": "संपर्क करें", "contact.title": "हमें आपसे सुनना अच्छा लगेगा",
     "contact.address": "पता", "contact.addressValue": "इमामिया मस्जिद, कोरझा, अंबेडकर नगर, उत्तर प्रदेश",
-    "contact.phone": "फ़ोन", "contact.phoneValue": "+91 98765 43210",
-    "contact.email": "ईमेल", "contact.emailValue": "contact@noorekarbala.org",
+    "contact.phone": "फ़ोन", "contact.phoneValue": "+91 70811 96735",
+    "contact.email": "ईमेल", "contact.emailValue": "contact@haidariyafoundation.org",
     "contact.mapPlaceholder": "मानचित्र स्थान",
     "contact.formName": "नाम", "contact.formEmail": "ईमेल", "contact.formMessage": "संदेश",
     "contact.send": "संदेश भेजें", "contact.sent": "संदेश भेजा गया",
@@ -139,17 +139,17 @@ export const STRINGS = {
 
     "footer.tagline": "नमाज़, याद और सामुदायिक सेवा के लिए एक शांत स्थान।",
     "footer.quickLinks": "त्वरित लिंक", "footer.contact": "संपर्क", "footer.prayer": "नमाज़",
-    "footer.copyright": "© 2026 नूर-ए-कर्बला ट्रस्ट। सर्वाधिकार सुरक्षित।",
+    "footer.copyright": "© 2026 हैदरिया फ़ाउंडेशन। सर्वाधिकार सुरक्षित।",
     "footer.blessing": "अल्लाह हर सच्चे योगदान को स्वीकार करे।",
   },
 
   ur: {
     "nav.home": "ہوم", "nav.about": "ہمارے بارے میں", "nav.donate": "عطیہ کریں",
     "nav.transparency": "شفافیت", "nav.contact": "رابطہ کریں", "nav.donateNow": "ابھی عطیہ کریں",
-    "brand": "نور کربلا",
+    "brand": "حیدریہ فاؤنڈیشن",
 
     "hero.tag": "مسجد • امام بارگاہ • کربلا",
-    "hero.title": "نور کربلا ٹرسٹ",
+    "hero.title":"حیدریہ فاؤنڈیشن",
     "hero.subtitle": "نماز، ذکر اور برادری کے لیے ایک پرسکون مقام — جو مکمل طور پر آپ جیسے سخی لوگوں کی فیاضی سے چلتا ہے۔",
     "hero.donate": "ابھی عطیہ کریں", "hero.learnMore": "مزید جانیں",
 
@@ -198,8 +198,8 @@ export const STRINGS = {
 
     "contact.tag": "رابطہ کریں", "contact.title": "ہمیں آپ سے سن کر خوشی ہوگی",
     "contact.address": "پتہ", "contact.addressValue": "امامیہ مسجد، کورجھا، امبیڈکر نگر، اتر پردیش",
-    "contact.phone": "فون", "contact.phoneValue": "+91 98765 43210",
-    "contact.email": "ای میل", "contact.emailValue": "contact@noorekarbala.org",
+    "contact.phone": "فون", "contact.phoneValue": "+91 70811 96735",
+    "contact.email": "ای میل", "contact.emailValue": "contact@haidariyafoundation",
     "contact.mapPlaceholder": "نقشے کی جگہ",
     "contact.formName": "نام", "contact.formEmail": "ای میل", "contact.formMessage": "پیغام",
     "contact.send": "پیغام بھیجیں", "contact.sent": "پیغام بھیج دیا گیا",
@@ -207,7 +207,7 @@ export const STRINGS = {
 
     "footer.tagline": "نماز، ذکر اور سماجی خدمت کے لیے ایک پرسکون مقام۔",
     "footer.quickLinks": "فوری روابط", "footer.contact": "رابطہ", "footer.prayer": "نماز",
-    "footer.copyright": "© 2026 نور کربلا ٹرسٹ۔ جملہ حقوق محفوظ ہیں۔",
+    "footer.copyright": "© 2026 حیدریہ فاؤنڈیشن. جملہ حقوق محفوظ ہیں۔",
     "footer.blessing": "اللہ ہر مخلصانہ عطیہ قبول فرمائے۔",
   },
 };

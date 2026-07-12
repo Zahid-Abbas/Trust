@@ -11,7 +11,7 @@ const hind = Hind({ subsets: ["devanagari", "latin"], variable: "--font-hind", w
 const nastaliq = Noto_Nastaliq_Urdu({ subsets: ["arabic"], variable: "--font-nastaliq", weight: ["400", "600", "700"] });
 
 export const metadata: Metadata = {
-  title: "Noor-e-Karbala Trust — Masjid, Imambargah & Karbala Donations",
+  title: "Haidariya Foundation — Masjid, Imambargah & Karbala Donations",
   description: "A peaceful space for prayer, remembrance, and community — sustained by the generosity of donors.",
 };
 
