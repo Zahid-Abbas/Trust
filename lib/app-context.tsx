@@ -10,7 +10,7 @@ type Ctx = {
   lang: Lang;
   setLang: (l: Lang) => void;
   t: (key: string) => string;
-  colors: typeof PALETTE.light;
+  colors: (typeof PALETTE)[ThemeName];
 };
 
 const AppContext = createContext<Ctx | null>(null);
